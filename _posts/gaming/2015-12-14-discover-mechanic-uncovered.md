@@ -14,6 +14,6 @@ Disclaimer: This article will continue to grow as I spend more time exploring th
 
 <p>I could write a lengthy article on each of the new cards but as others have already touched on most of those aspects I'd like to put the new mechanic Discover under a finer microscrope.</p>
 
-{% tweet https://twitter.com/DEVOPS_BORAT/status/159849628819402752 align='center' %}
+{% tweet https://twitter.com/bdbrode/status/666359351980920832 align='center' %}
 
 To be continued
