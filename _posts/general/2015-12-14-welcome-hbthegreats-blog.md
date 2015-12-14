@@ -2,7 +2,9 @@
 layout: post
 title:  "Welcome to Hbthegreat's Blog!"
 date:   2015-12-14 14:13:07
-categories: hbthegreat welcome
+categories: general
+parent-category: General
+parent-category-link: general
 ---
 
 Welcome to the online home of code/games/stories and all other things I feel like posting. I have put this blog together as I have finally reached the point of having enough time to getting around to making it.

@@ -2,10 +2,21 @@
 layout: page
 title: About
 permalink: /about/
+group: "navigation"
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Welcome to the online home of code/games/stories and all other things I feel like posting. I have put this blog together as I have finally reached the point of having enough time to getting around to making it.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+Firstly a bit about me.
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+* My real name is Ryan Handby and I currently live in Melbourne, Australia.
+
+* I love techonology and programming - I have been this way since my first computer when I was 2 or 3 years old. I picked up programming when I was about 7-8 years old and started building websites when I was 12.
+
+* I love video games - I have played many games over the years with my favourites coming in the forms of the Tony Hawk's Pro Skater series, Battlefield 2 and 2142, World of Warcraft and my most recent love Hearthstone.
+
+* I love craft beers and good foods - in saying this I love experimenting with strange combinations of foods and cocktails. Lifes too short for boring right?
+
+* I am a firm believer in giving everything at least one try before writing it off (unless it seems completely outrageous)
+
+* I love my beautiful girlfriend (if I didn't add this I am sure she would notice eventually :P)

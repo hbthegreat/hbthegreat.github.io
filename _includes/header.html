@@ -12,16 +12,39 @@
           <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
         </svg>
       </a>
-
-      <div class="trigger">
-        {% for page in site.pages %}
-          {% if page.title %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          {% endif %}
-        {% endfor %}
-      </div>
     </nav>
 
   </div>
-
 </header>
+  <ul class="nav nav-tabs" role="tablist">
+    {% if page.url == '/index.html' %}
+      <li role="presentation" class="active"><a href="/">Home</a></li>
+    {% else %}
+      <li role="presentation"><a href="/">Home</a></li>
+    {% endif %}
+    {% if page.url contains '/programming/' %}
+      <li role="presentation" class="active"><a href="/programming">Programming</a></li>
+    {% else %}
+      <li role="presentation"><a href="/programming">Programming</a></li>
+    {% endif %}
+    {% if page.url contains '/gaming/' %}
+      <li role="presentation" class="active"><a href="/gaming">Gaming</a></li>
+    {% else %}
+      <li role="presentation"><a href="/gaming">Gaming</a></li>
+    {% endif %}
+    {% if page.url contains '/entrepreneurial/' %}
+      <li role="presentation" class="active"><a href="/entrepreneurial">Entrepreneurial</a></li>
+    {% else %}
+      <li role="presentation"><a href="/entrepreneurial">Entrepreneurial</a></li>
+    {% endif %} 
+    {% if page.url contains '/general/' %}
+      <li role="presentation" class="active"><a href="/general">General</a></li>
+    {% else %}
+      <li role="presentation"><a href="/general">General</a></li>
+    {% endif %}
+    {% if page.url contains '/about/' %}
+      <li role="presentation" class="active"><a href="/about">About</a></li>
+    {% else %}
+      <li role="presentation"><a href="/about">About</a></li>
+    {% endif %}    
+  </ul>
