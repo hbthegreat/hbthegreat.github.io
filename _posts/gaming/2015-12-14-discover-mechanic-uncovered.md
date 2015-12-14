@@ -14,6 +14,7 @@ Disclaimer: This article will continue to grow as I spend more time exploring th
 
 <p>I could write a lengthy article on each of the new cards but as others have already touched on most of those aspects I'd like to put the new mechanic Discover under a finer microscrope.</p>
 
-{% tweet https://twitter.com/bdbrode/status/666359351980920832 align='center' %}
+<a class="embedly-card" href="https://twitter.com/bdbrode/status/666359351980920832">Ben Brode on Twitter</a>
+<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 
 To be continued
