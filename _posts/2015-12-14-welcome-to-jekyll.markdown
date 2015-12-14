@@ -1,25 +1,17 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Welcome to Hbthegreat's Blog!"
 date:   2015-12-14 14:13:07
-categories: jekyll update
+categories: hbthegreat welcome
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve --watch`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Welcome to the online home of code/games/stories and all other things I feel like posting. I have put this blog together as I have finally reached the point of having enough time to getting around to making it.
 
-Jekyll also offers powerful support for code snippets:
+Firstly a bit about me. 
+* I love techonology and programming - I have been this way since my first computer when I was 2 or 3 years old. I picked up programming when I was about 7-8 years old and started building websites when I was 12.
+* I love video games - I have played many games over the years with my favourites coming in the forms of the Tony Hawk's Pro Skater series, Battlefield 2 and 2142, World of Warcraft and my most recent love Hearthstone.
+* I love craft beers and good foods - in saying this I love experimenting with strange combinations of foods and cocktails. Lifes too short for boring right?
+* I am a firm believer in giving everything at least one try before writing it off (unless it seems completely outrageous)
+* I love my beautiful girlfriend (if I didn't add this I am sure she would notice eventually :P)
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
-
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
