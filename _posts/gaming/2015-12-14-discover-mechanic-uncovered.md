@@ -39,6 +39,8 @@ Disclaimer: This article will continue to grow as I spend more time exploring th
     </div>
     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body">
+       Sir Finley was chosen as the first card as it is the only Discover minion that does not Discover cards but instead he Discovers one of 3 new basic hero powers. As the hero power is always a new hero power that leaves us with only 8 of the 9 remaining starting hero powers to choose from. So what is the % chance to be offered exactly the hero power you are looking for when playing Sir Finley?
+The answer will be here soon
        All stuff about sir finley will be here including stats. Playability. Synergy scenarios etc
       </div>
     </div>
