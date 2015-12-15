@@ -213,7 +213,7 @@ The answer will be here soon
           <div>Even with a 4 weighting you can only get presented with the card once! Not 3 times.</div>
           <blockquote>
             <div><b>k</b> = 4 (there are 4 possible chances of getting exactly 1 Druid minion possibilities from Raven Idol)</div>
-            <div><b>x</b> = Can be 0,1,2 or 3 this is the amount of cards presented that ARE Taunt</div>
+            <div><b>x</b> = Can be 0 or 1 as you either get the card or you dont!</div>
             <div><b>N</b> = There are 394 total possible cards</div>
             <div><b>n</b> = 3 (Discover presents 3 options)</div>
           </blockquote>
