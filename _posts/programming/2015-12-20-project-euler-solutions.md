@@ -833,6 +833,8 @@ for(var i in abundants)
 }
 
 console.log("The sum of all positive integers which cannot be written as the sum of 2 abundants under 28123 is: " + sum);
+{% endhighlight %}
+      <p>Once this set of functions eventually evaluates we get the answer of: 4179871.</p>
       </div>
     </div>
   </div>
