@@ -839,3 +839,69 @@ console.log("The sum of all positive integers which cannot be written as the sum
     </div>
   </div>
 </div>
+<div class="panel panel-default">
+  <div class="panel-heading" role="tab" id="headingTen">
+    <h4 class="panel-title">
+      <a role="button" data-toggle="collapse" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+        Project Euler Problem 24 - Lexicographic permutations
+      </a>
+    </h4>
+  </div>
+  <div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+    <div class="panel-body">
+      <div class="problem-description">
+        <p>A permutation is an ordered arrangement of objects. For example, 3124 is one possible permutation of the digits 1, 2, 3 and 4. If all of the permutations are listed numerically or alphabetically, we call it lexicographic order. The lexicographic permutations of 0, 1 and 2 are:</p>
+        <p class="text-center">012&nbsp; &nbsp;021&nbsp; &nbsp;102&nbsp; &nbsp;120&nbsp; &nbsp;201&nbsp; &nbsp;210</p>
+        <p>What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9?</p>
+      </div>
+      <div class="solution">
+        <p>When approaching this problem is is easy to see that we need a function that can take a string/list of numbers and generate lexographic permutations. So we will start there.</p>
+{% highlight js %}
+var tempPerm = "0123456789".split("");
+function lexographicPermutation(str)
+{
+  var swap = function(firstCharacter, secondCharacter)
+  {
+    var temp = str[firstCharacter];
+    str[firstCharacter] = str[secondCharacter];
+    str[secondCharacter] = temp;
+  }
+  var k = -1;
+  //Here we are finding the least significant pair of numbers
+  //that meet the criteria of a permutation
+  for(var i = 0; i < str.length -1; i++)
+  {
+    if (str[i] < str[i+1]) k = i;
+  }
+
+  if(k ==-1)return str; //This means there are no more permutations
+
+  var l = -1;
+  for(var i = 0; i < str.length; i++)
+  {
+    if(str[k] < str[i]) l=i;
+  }
+  //now we must swap k and l to create the next permutation
+  swap(k,l);
+
+  //most of the string is already in the correct order as we are only adjusting
+  //2 chars at a time. So we must reverse the sequence for k+1 length in the string an
+  //add it back to the end
+  return str.slice(0, k+1).concat(str.slice(k+1).reverse());
+}
+{% endhighlight %}
+      <p>Now that we have a function that takes a string input and returns a lexographic permutation of that string we can complete the problem.</p>
+{% highlight js %}
+for(var i = 1; i < 1000000; i++)
+{
+  //we will use tempPerm from above
+  tempPerm = lexographicPermutation(tempPerm);
+}
+
+console.log("The one millionth permutation of 0123456789 is: " + tempPerm.join(""));
+{% endhighlight %}
+
+      </div>
+    </div>
+  </div>
+</div>
