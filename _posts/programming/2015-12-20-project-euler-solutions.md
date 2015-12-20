@@ -682,3 +682,98 @@ console.log("The number of sundays during the period was:" + numOfSundays);
     </div>
   </div>
 </div>
+<div class="panel panel-default">
+  <div class="panel-heading" role="tab" id="headingEight">
+    <h4 class="panel-title">
+      <a role="button" data-toggle="collapse" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+        Project Euler Problem 21 - Amicable numbers
+      </a>
+    </h4>
+  </div>
+  <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+    <div class="panel-body">
+      <div class="problem-description">
+        <p>Let d(<i>n</i>) be defined as the sum of proper divisors of <i>n</i> (numbers less than <i>n</i> which divide evenly into <i>n</i>).<br>
+        If d(<i>a</i>) = <i>b</i> and d(<i>b</i>) = <i>a</i>, where <i>a</i> ≠ <i>b</i>, then <i>a</i> and <i>b</i> are an amicable pair and each of <i>a</i> and <i>b</i> are called amicable numbers.</p>
+        <p>For example, the proper divisors of 220 are 1, 2, 4, 5, 10, 11, 20, 22, 44, 55 and 110; therefore d(220) = 284. The proper divisors of 284 are 1, 2, 4, 71 and 142; so d(284) = 220.</p>
+        <p>Evaluate the sum of all the amicable numbers under 10000.</p>
+      </div>
+      <div class="solution">
+        <p>For this challenge I have decided to do it in <b>JavaScript</b>.</p>
+        <p>To start with solving this problem we will need a way to see if a particular number is Amicable. So let's put together a function that does that first.</p>
+        <p>After initially looking at the problem I discovered I also had to write functions for getting factors and summing them so they are also included.</p>
+{% highlight js %}
+function getFactors(number)
+{
+  /*returns 0 if number is 0 or 1 if it is 1/2/3 as the only factor is 1*/
+  if(number <= 3)
+  {
+    switch(number)
+    {
+      case 0:
+      return [0];
+      default:
+      return [1];
+    }
+  }
+  /*all numbers have 1 as a factor*/
+  var factors = [1];
+  var factorLimit = Math.floor(Math.sqrt(number));
+  for(var i = 2; i < factorLimit; i++)
+  {
+    if (number % i === 0)
+    {
+      /*adds both factors found at the same time*/
+      factors.push(i);
+      factors.push(number/i);
+    }
+  }
+  if(number/factorLimit == factorLimit) factors.push(factorLimit);
+  else if (number % factorLimit === 0)
+  {
+    factors.push(factorLimit);
+    factors.push(number/factorLimit);
+  }
+  return factors;
+}
+
+function arraySum(numericalArray)
+{
+  var sum = 0;
+  for(var i in numericalArray)
+  {
+    sum += numericalArray[i];
+  }
+  return sum;
+}
+
+function sumOfFactors(number)
+{
+  return arraySum(getFactors(number));
+}
+
+function isAmicable(number)
+{
+  var pair = sumOfFactors(number);
+  if (pair == number) return false;
+  if(sumOfFactors(pair) == number) return true;
+  else return false;
+}
+{% endhighlight js %}
+
+<p>Now that we have all the tools we need to test for Amicable numbers all thats left is to get the sum of all of them below 10000 as started in the question description.</p>
+
+{% highlight js %}
+var sum = 0;
+for(var i = 2; i < 10000; i++)
+{
+  if(isAmicable(i)) sum+=i;
+}
+console.log("The sum of all Amicable numbers below 10000: " + sum);
+{% endhighlight %}
+
+      <p>From this we can establish that the sumof all Amicable numbers below 10000 is 31626.</p>
+      </div>
+    </div>
+  </div>
+</div>
