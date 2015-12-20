@@ -900,7 +900,326 @@ for(var i = 1; i < 1000000; i++)
 
 console.log("The one millionth permutation of 0123456789 is: " + tempPerm.join(""));
 {% endhighlight %}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading" role="tab" id="headingEleven">
+    <h4 class="panel-title">
+      <a role="button" data-toggle="collapse" href="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+        Project Euler Problem 25 - 1000-digit Fibonacci number
+      </a>
+    </h4>
+  </div>
+  <div id="collapseEleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+    <div class="panel-body">
+      <div class="problem-description">
+        <p>The Fibonacci sequence is defined by the recurrence relation:</p>
+        <blockquote>F<sub><i>n</i></sub> = F<sub><i>n</i>−1</sub> + F<sub><i>n</i>−2</sub>, where F<sub>1</sub> = 1 and F<sub>2</sub> = 1.</blockquote>
+        <p>Hence the first 12 terms will be:</p>
+        <blockquote>F<sub>1</sub> = 1<br>
+        F<sub>2</sub> = 1<br>
+        F<sub>3</sub> = 2<br>
+        F<sub>4</sub> = 3<br>
+        F<sub>5</sub> = 5<br>
+        F<sub>6</sub> = 8<br>
+        F<sub>7</sub> = 13<br>
+        F<sub>8</sub> = 21<br>
+        F<sub>9</sub> = 34<br>
+        F<sub>10</sub> = 55<br>
+        F<sub>11</sub> = 89<br>
+        F<sub>12</sub> = 144</blockquote>
+        <p>The 12th term, F<sub>12</sub>, is the first term to contain three digits.</p>
+        <p>What is the index of the first term in the Fibonacci sequence to contain 1000 digits?</p>
+      </div>
+      <div class="solution">
+        <p>In the past we have created fibonnaci solutions to learn things like recursion and generally that would be the way to go about getting to this solution. In this case though we must use our own created BigInt instead of just a regular variable as 1000 digits is enormous.</p>
+        <p>First we will create a BigInt data type because javascript max is 9007199254740992.</p>
+        <p>This BigInt class was taken from https://github.com/mastercactapus/Project-Euler--javascript-/blob/master/bigint.js so all credit to mastercactapus for the intial version!</p>
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingTwelve">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" href="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                Big Int Code - (Hidden for reading convienience)
+              </a>
+            </h4>
+          </div>
+          <div id="collapseTwelve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve">
+            <div class="panel-body">
+              <div class="problem-description">
+{% highlight js %}
+//js max 9007199254740992
 
+function BigInt(n, opts) {
+    opts = opts||{};
+    var str = false;
+    if (n instanceof BigInt) {
+        this.base = opts.base || n.base;
+        this.digits = n.digits.slice(0);
+    } else if (n instanceof Array) {
+        this.base = opts.base||10;
+        this.digits = n.slice(0);
+    } else if (typeof n === "number") {
+        this.base = opts.base||10;
+        this.digits = [0,0];
+        var neg = false;
+        if (n < 0) neg=true,n = Math.abs(n);
+        this._set(0,n,true);
+        if (neg) this.digits = this._neg();
+    } else {
+        this.base = opts.base||10;
+        str = true;
+        this.digits = n.toString().split("").reverse();
+        if (this.digits[this.digits.length-1] === "-") {
+            this.digits[this.digits.length-1] = 0;
+            this.digits = this._neg();
+        } else {
+            this.digits.push(0);
+        }
+        this.digits = this.digits.map(function(digit){
+            return +digit;
+        });
+    }
+
+    if (opts.pad) {
+        this._pad(opts.pad);
+    }
+    if (str && this.base !== 10) {
+        this.base = 10;
+        return this.toBase(this.base);
+    }
+}
+
+BigInt.prototype = {
+    toBase: function(base) {
+        var out = new(BigInt)(0,{base:base});
+
+        var res = this._div(base);
+        var i = 0;
+        out._add(0, res[1].toInteger(), true);
+
+        while (res[0].gt(0)) {
+            i++;
+            res = res[0]._div(base);
+            out._pad(i+1);
+            out._add(i, res[1].toInteger(), true);
+        }
+        return out;
+    },
+    new: function(n) {
+        if (typeof n === "number") {
+            n = new BigInt(n,{base: this.base});
+        } else {
+            n = new BigInt(n);
+        }
+
+        return n.base === this.base ? n : n.toBase(this.base);
+    },
+    add: function(n) {
+        n = this.new(n);
+
+        var len = Math.max(n.digits.length,this.digits.length) + 1;
+        var out = new BigInt(0, {pad:len,base:this.base});
+
+        for (var i=0;i<=len;i++){
+             out._add(i, this._get(i) + n._get(i));
+        }
+
+        return out;
+    },
+    sub: function(n) {
+        return this.add(this.new(n)._neg());
+    },
+    mul: function(n) {
+       n = this.new(n);
+
+        var len = n.digits.length + this.digits.length - 2;
+        var out = new BigInt(0, {pad:len,base:this.base});
+
+        for (var i_n=0,n_len=n.digits.length;i_n<=n_len;i_n++){
+            for (var i_this=0,this_len=this.digits.length;i_this<=this_len;i_this++){
+                out._add(i_n + i_this, this._get(i_this) * n._get(i_n));
+            }
+        }
+        return out;
+    },
+    div: function(n){
+        return this._div(n)[0];
+    },
+    mod: function(n){
+        return this._div(n)[1];
+    },
+    _div: function(n) {
+       n = this.new(n);
+
+       var rem = new BigInt(this);
+       var out = this.new(0);
+       var inc = this.new(1);
+       while (rem.gte(n)) {
+           rem = rem.sub(n);
+           out = out.add(inc);
+       }
+
+       return [out,rem];
+    },
+    _cmp: function(n,cmp) {
+       n = this.new(n);
+
+        var len = Math.max(n.digits.length, this.digits.length);
+        if (this._get(len) === n._get(len)) {
+
+            for (var i = len;i>0;i--) {
+                if (this._get(i) !== n._get(i)) return cmp(this._get(i), n._get(i));
+            }
+            return cmp(this._get(0), n._get(0));
+        } else {
+            return cmp(n._get(len), this._get(len));
+        }
+    },
+    _lt: function(a,b) {
+        return a<b;
+    },
+    _gt: function(a,b) {
+        return a>b;
+    },
+    _lte: function(a,b) {
+        return a<=b;
+    },
+    _gte: function(a,b) {
+        return a>=b;
+    },
+    lt: function(n) {
+        return this._cmp(n, this._lt);
+    },
+    gt: function(n) {
+        return this._cmp(n, this._gt);
+    },
+    lte: function(n) {
+        return this._cmp(n, this._lte);
+    },
+    gte: function(n) {
+        return this._cmp(n, this._gte);
+    },
+    eq: function(n) {
+       n = this.new(n);
+
+        var len = Math.max(n.digits.length, this.digits.length);
+
+        for (var i =0;i<len;i++) {
+            if (n._get(i) !== this._get(i)) return false;
+        }
+        return true;
+    },
+    pow: function(n) {
+       n = this.new(n);
+       var inc = this.new(1);
+
+        if (n.eq(0)) return inc;
+
+        var out = new BigInt(this);
+        for (var c = new BigInt(1); c.lt(n); c=c.add(inc)) {
+            out = out.mul(this);
+        }
+
+        return out;
+    },
+    toString: function() {
+        if (this.base !== 10) {
+            return this.toBase(10).toString();
+        }
+        if (this.digits[this.digits.length-1] === 9) {
+            return "-" + this._neg().slice(0).reverse().join("").replace(/^0+(.)/,"$1");
+        } else {
+            return this.digits.slice(0).reverse().join("").replace(/^0+(.)/,"$1");
+        }
+    },
+    toInteger: function() {
+        var digits = this.digits, neg = false;
+        if (this.digits[this.digits.length-1] === this.base-1) {
+            digits = this._neg();
+            neg=true;
+        }
+
+        var out = 0;
+
+        for (var i=0;i<digits.length;i++){
+            out += Math.pow(this.base, i) * digits[i];
+        }
+
+        return neg ? -out : out;
+
+    },
+    _get: function(i) {
+        return +((i < this.digits.length) ? this.digits[i] : this._last);
+    },
+    _set: function(idx,val,pad){
+        var carry = val;
+        for (var i=idx;i<this.digits.length;i++) {
+            if (pad) this._pad(i+1);
+            this.digits[i] = carry % this.base;
+            carry = Math.floor(carry/this.base) + this._get(i + 1);
+            if (carry === 0) break;
+        }
+        return this;
+    },
+    _add: function(idx,val,pad){
+        return this._set(idx, this._get(idx) + (+val), pad);
+    },
+    get _last() {
+        return this.digits[this.digits.length-1];
+    },
+    _pad: function(length) {
+        for (var i=0,len=length + 1 - this.digits.length;i<len;i++){
+            this.digits.push(this._last);
+        }
+    },
+    _sigDigits: function() {
+        for (var i=this.digits.length-1;i>=0;i--) {
+            if (this.digits[i] !== this._last) return i+1;
+        }
+        return 0;
+    },
+    _neg: function() {
+        var carry = 1;
+        var self = this;
+        var neg = this.digits.map(function(digit){
+            var val = self.base-1-digit+carry;
+            if (val === self.base) {
+                val=0;
+                carry = 1;
+            } else {
+                carry = 0;
+            }
+            return val;
+        });
+        return neg;
+
+    }
+};
+{% endhighlight %}
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>Now that we have BigInt ready to go it should be much easier to find the answer to the fibonacci problem we started working on hours ago haha.</p>
+{% highlight js %}
+
+var term = 3;
+var fib1 = new BigInt(1);
+var fib2 = new BigInt(1);
+var fibNext = new BigInt(2);
+
+var max = new BigInt(10).pow(999);
+while(max.gt(fibNext)){
+  fib1 = fib2;
+  fib2 = fibNext;
+  fibNext = fib1.add(fib2);
+  term++;
+}
+console.log("The index of the first term in the Fibonacci sequence to contain 1000 digits is: "+term);
+{% endhighlight %}
+      <p>After dealing with numerous bugs and hiccups we have come to the conclusion that the first time in the fibonacci sequence to contain 1000 digits is the 4782th element.</p>
       </div>
     </div>
   </div>
