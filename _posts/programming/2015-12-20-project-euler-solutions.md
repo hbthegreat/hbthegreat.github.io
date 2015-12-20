@@ -8,7 +8,10 @@ parent-category-link: programming
 ---
 
 <p>This post will focus on my solutions for Project Euler Problems.</p>
-<p>At the time of writing this I had already completed 15+ challenges so I will add solutions to those in time</p>
+<p>At the time of writing this I had already completed 15+ challenges so I will add solutions to those in time when I get stuck on others.</p>
+<p>The total amount of challenges I have solved on Project Euler can be seen in the following images:</p>
+<div class="text-center"><img src="https://projecteuler.net/profile/Hbthegreat.png" /></div>
+<b>DISCLAIMER: These solutions do actually contain the answers so if you are looking to complete them yourself do that before reading any further.</b>
 
 <div class="panel panel-default">
   <div class="panel-heading" role="tab" id="headingOne">
@@ -197,6 +200,7 @@ console.log('The highest product in the grid is: ' + highestProduct);
         <p>What is the value of the first triangle number to have over five hundred divisors?</p>
       </div>
       <div class="solution">
+        <p>For this challenge I have decided to do it in <b>JavaScript</b>.</p>
         <p>Firstly we need to have a function that count the number of factors in essentially any input:</p>
 {% highlight js %}
 numberOfFactors(numberToTest)
@@ -345,6 +349,7 @@ console.log("The first triangle number with 500 or more factors is: "+ currTrian
       </div>
       </div>
       <div class="solution">
+        <p>For this challenge I have decided to do it in <b>JavaScript</b>.</p>
         <p>First thougths when looking at this problem are - "Holy %*#! thats a lot of numbers" we firstly need to store them in an array that can be used in our solution, in this case we will use strings because right now they are too long to use regular integer addition:</p>
 {% highlight js %}
 var strNums = ["37107287533902102798797998220837590246510135740250",
@@ -507,6 +512,7 @@ console.log("The first 10 digits of the sum of all the numbers provided is: "+ s
         <p class="note"><b>NOTE:</b> Once the chain starts the terms are allowed to go above one million.</p>
       </div>
       <div class="solution">
+        <p>For this challenge I have decided to do it in <b>JavaScript</b>.</p>
       <p>My first thought when looking at this problem is that it seems a bit more straight forward than other problems we have solved today and should only take a simple algorithm.</p>
 {% highlight js %}
 /*The current number being test "current longest chain candidated"*/
@@ -573,6 +579,7 @@ console.log("The longest chain with a number starting under 1 million is: "+loc+
         <p class="note"><b>NOTE:</b> As there are only 16384 routes, it is possible to solve this problem by trying every route. However, <b>Problem 67</b>, is the same challenge with a triangle containing one-hundred rows; it cannot be solved by brute force, and requires a clever method! ;o)</p>
       </div>
       <div class="solution">
+        <p>For this challenge I have decided to do it in <b>JavaScript</b>.</p>
         <p>The first thing I notice about this challenge is that it should be easily brute-forceable but for the sake of having code ready for Problem 67 I will not be brute forcing this challenge.</p>
         <p>We will start by putting the given triangle into a usable array.</p>
 {% highlight js %}
@@ -622,6 +629,55 @@ for(var i = 0; i < 1000; i++)
 console.log("The maximum path available through the pyramid is: "+ maxSum);
 {% endhighlight %}
       <p>After running this algorithm we can find that the maximum path through the pyramid is 1074.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading" role="tab" id="headingSeven">
+    <h4 class="panel-title">
+      <a role="button" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+          Project Euler Problem 19 - Counting Sundays
+      </a>
+    </h4>
+  </div>
+  <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+    <div class="panel-body">
+      <div class="problem-description">
+        <p>You are given the following information, but you may prefer to do some research for yourself.</p>
+        <ul>
+          <li>1 Jan 1900 was a Monday.</li>
+          <li>Thirty days has September,<br>
+              April, June and November.<br>
+              All the rest have thirty-one,<br>
+              Saving February alone,<br>
+              Which has twenty-eight, rain or shine.<br>
+              And on leap years, twenty-nine.</li>
+          <li>A leap year occurs on any year evenly divisible by 4, but not on a century unless it is divisible by 400.</li>
+        </ul>
+        <p>How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?</p>
+      </div>
+      <div class="solution">
+        <p>For this challenge I have decided to do it in <b>JavaScript</b>.</p>
+        <p>This problem could be solvable purely by pulling out a calendar and counting every single Sunday... but we won't be doing that we will be actually calculating the amount of Sundays!</p>
+        <p>We can use JavaScript's Date functions to our advantage in this excercise.</p>
+{% highlight js %}
+/*We will initialise the date to 1st of Jan 1901*/
+var currentDate = new Date("1 Jan 1901");
+/*The final date in our range*/
+var endDate = new Date("31 Dec 2000");
+var numOfSundays = 0;
+
+while(currentDate <= endDate)
+{
+  /*getDay = 0 returns true if it is a Sunday. getDate() == 1 returns true if it is on the first of the month*/
+  if(currentDate.getDay() == 0 && currentDate.getDate() == 1) numOfSundays++;
+  currentDate.setDate(currentDate.getDate()+1);
+}
+
+console.log("The number of sundays during the period was:" + numOfSundays);
+{% endhighlight %}
+      <p>After iterating over all the dates in the the range specified we get to the answer of 171 Sundays!</p>
       </div>
     </div>
   </div>
