@@ -7,8 +7,8 @@ parent-category: Programming
 parent-category-link: programming
 ---
 
-This post will focus my solutions for Project Euler Problems.
-At the time of writing this I had already completed 15+ challenges so I will add solutions to those in time
+<p>This post will focus on my solutions for Project Euler Problems.</p>
+<p>At the time of writing this I had already completed 15+ challenges so I will add solutions to those in time</p>
 
 <div class="panel panel-default">
   <div class="panel-heading" role="tab" id="headingOne">
@@ -483,6 +483,56 @@ for(i in strNums)
 console.log("The first 10 digits of the sum of all the numbers provided is: "+ sum.substr(0,10));
 {% endhighlight %}
       <p>After running our algorithm the with a list of triangular numbers we get the answer: 5537376230.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading" role="tab" id="headingFive">
+    <h4 class="panel-title">
+      <a role="button" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+        Project Euler Problem 14 - Longest Collatz sequence
+      </a>
+    </h4>
+  </div>
+  <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+    <div class="panel-body">
+      <div class="problem-description">
+        <p>The following iterative sequence is defined for the set of positive integers:</p>
+        <p style="margin-left:50px;"><var>n</var> → <var>n</var>/2 (<var>n</var> is even)<br><var>n</var> → 3<var>n</var> + 1 (<var>n</var> is odd)</p>
+        <p>Using the rule above and starting with 13, we generate the following sequence:</p>
+        <div class="text-center">13 → 40 → 20 → 10 → 5 → 16 → 8 → 4 → 2 → 1</div>
+        <p>It can be seen that this sequence (starting at 13 and finishing at 1) contains 10 terms. Although it has not been proved yet (Collatz Problem), it is thought that all starting numbers finish at 1.</p>
+        <p>Which starting number, under one million, produces the longest chain?</p>
+        <p class="note"><b>NOTE:</b> Once the chain starts the terms are allowed to go above one million.</p>
+      </div>
+      <div class="solution">
+      <p>My first thought when looking at this problem is that it seems a bit more straight forward than other problems we have solved today and should only take a simple algorithm.</p>
+{% highlight js %}
+/*The current number being test "current longest chain candidated"*/
+var clcc = 1;
+/*Length of the current chain*/
+var loc = 1;
+
+for(var i = 2; i < 1000000; i++)
+{
+  var temp = i;
+  var count = 0;
+  while(temp != 1)
+  {
+    if (temp % 2 == 0) temp = temp/2;
+    else temp = temp*3 + 1;
+    count++;
+  }
+  if(count > loc)
+  {
+    loc = count;
+    clcc = i;
+  }
+}
+
+console.log("The longest chain with a number starting under 1 million is: "+loc+ " that chain belongs to the number: "+clcc);
+{% endhighlight %}
       </div>
     </div>
   </div>
