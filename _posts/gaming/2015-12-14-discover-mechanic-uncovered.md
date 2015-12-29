@@ -336,10 +336,29 @@ parent-category-link: gaming
           </blockquote>
           <div>Putting these values into our formula above we can establish the following probabilities (rounded to 4 decimal places):</div>
           <blockquote>
-            <div>Chance to get exactly 0 Taunts presented: 69.1113%</div>
-            <div>Chance to get exactly 1 Taunts presented: 27.2496%</div>
-            <div>Chance to get exactly 2 Taunts presented: 3.4935%</div>
-            <div>Chance to get exactly 3 Taunts presented: 0.1456%</div>
+            <div>Chance to get exactly 0 Taunts presented: 68.8351%</div>
+            <div>Chance to get exactly 1 Taunts presented: 27.4545%</div>
+            <div>Chance to get exactly 2 Taunts presented: 3.5604%</div>
+            <div>Chance to get exactly 3 Taunts presented: 0.1501%</div>
+          </blockquote>
+        </div>
+        <hr/>
+        <div>
+          <h3>Chance of getting x number of Heal minions presented.</h3>
+          <div>Out of the 8 possibilties of Heal minions there is 1 Druid class minion making the total Taunt count 11.</div>
+          <div>Out of the 331 possibilities of minions to be presented 21 are Druid class minions making the total minion count 394.</div>
+          <blockquote>
+            <div><b>k</b> = 11 (there are 11 possible Heal possibilities from Raven Idol)</div>
+            <div><b>x</b> = Can be 0,1,2 or 3 this is the amount of cards presented that ARE Heal</div>
+            <div><b>N</b> = There are 394 total possible cards</div>
+            <div><b>n</b> = 3 (Discover presents 3 options)</div>
+          </blockquote>
+          <div>Putting these values into our formula above we can establish the following probabilities (rounded to 4 decimal places):</div>
+          <blockquote>
+            <div>Chance to get exactly 0 Heals presented: 91.8359%</div>
+            <div>Chance to get exactly 1 Heals presented: 7.9543%</div>
+            <div>Chance to get exactly 2 Heals presented: 0.2082%</div>
+            <div>Chance to get exactly 3 Heals presented: 0.0016%</div>
           </blockquote>
         </div>
         <hr/>
@@ -358,10 +377,10 @@ parent-category-link: gaming
           </blockquote>
           <div>Putting these values into our formula above we can establish the following probabilities (rounded to 4 decimal places):</div>
           <blockquote>
-            <div>Chance to get exactly 0 of the Druid card you need for the ESPORTS moment presented: 97.0077%</div>
-            <div>Chance to get exactly 1 of the Druid card you need for the ESPORTS moment presented: 2.9696%</div>
-            <div>Chance to get exactly 0 of the non-Druid card you need for the ESPORTS moment presented: 99.2462%</div>
-            <div>Chance to get exactly 1 of the non-Druid card you need for the ESPORTS moment presented: 0.7538%</div>
+            <div>Chance to get exactly 0 of the Druid card you need for the ESPORTS moment presented: 96.9775%</div>
+            <div>Chance to get exactly 1 of the Druid card you need for the ESPORTS moment presented: 2.9993%</div>
+            <div>Chance to get exactly 0 of the non-Druid card you need for the ESPORTS moment presented: 99.2386%</div>
+            <div>Chance to get exactly 1 of the non-Druid card you need for the ESPORTS moment presented: 0.7614%</div>
           </blockquote>
         </div>
       </div>
