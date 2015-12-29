@@ -54,10 +54,16 @@ parent-category-link: gaming
   </div>
   <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
     <div class="panel-body">
-    <img src="/images/sir-finley-mrrgglton.gif" />
-     Sir Finley was chosen as the first card as it is the only Discover minion that does not Discover cards but instead he Discovers one of 3 new basic hero powers. As the hero power is always a new hero power that leaves us with only 8 of the 9 remaining starting hero powers to choose from. So what is the % chance to be offered exactly the hero power you are looking for when playing Sir Finley?
-The answer will be here soon
-     All stuff about sir finley will be here including stats. Playability. Synergy scenarios etc
+      <div class="col-md-3">
+        <img src="/images/sir-finley-mrrgglton.gif" />
+      </div>
+      <div class="col-md-9">
+        <p>Sir Finley Mrrgglton is the simplest Discover mechanic in all of Hearthstone to understand. But how do his statistics match up to your expectatoins?</p>
+        <p>Sir Finley simply provides you with 3 new basic Hero power options to choose from each of them are listed below:</p>
+        <video class="hscard-video" autoplay="autoplay" loop="loop" width="286" height="395" style="top: 0; left: 0; background: rgba(0, 0, 0, 0) no-repeat 0 0; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" data-href="/cards/185-shapeshift#gold" data-usegold="True" data-useanimation="True" data-usevideo="True" data-usegif="True" data-animationurl="http://media-Hearth.cursecdn.com/goldCards/0/185/185.webm" data-gifurl="http://media-Hearth.cursecdn.com/avatars/126/623/185.png" data-goldurl="http://media-Hearth.cursecdn.com/avatars/126/623/185.png" data-imageurl="http://media-Hearth.cursecdn.com/avatars/126/621/185.png" data-width="286">
+            <source src="/images/shapeshift.webm" type="video/webm">
+        </video>
+      </div>
     </div>
   </div>
 </div>
