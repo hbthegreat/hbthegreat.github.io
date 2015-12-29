@@ -60,9 +60,57 @@ parent-category-link: gaming
       <div class="col-md-9">
         <p>Sir Finley Mrrgglton is the simplest Discover mechanic in all of Hearthstone to understand. But how do his statistics match up to your expectatoins?</p>
         <p>Sir Finley simply provides you with 3 new basic Hero power options to choose from each of them are listed below:</p>
-        <video class="hscard-video" autoplay="autoplay" loop="loop" width="286" height="395" style="top: 0; left: 0; background: rgba(0, 0, 0, 0) no-repeat 0 0; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" data-href="/cards/185-shapeshift#gold" data-usegold="True" data-useanimation="True" data-usevideo="True" data-usegif="True" data-animationurl="http://media-Hearth.cursecdn.com/goldCards/0/185/185.webm" data-gifurl="http://media-Hearth.cursecdn.com/avatars/126/623/185.png" data-goldurl="http://media-Hearth.cursecdn.com/avatars/126/623/185.png" data-imageurl="http://media-Hearth.cursecdn.com/avatars/126/621/185.png" data-width="286">
-            <source src="/images/shapeshift.webm" type="video/webm">
-        </video>
+        <div class="row">
+          <div class="col-md-4">
+            <video class="hscard-video" autoplay="autoplay" loop="loop">
+                <source src="/images/shapeshift.webm" type="video/webm">
+            </video>
+          </div>
+          <div class="col-md-4">
+            <video class="hscard-video" autoplay="autoplay" loop="loop">
+                <source src="/images/steady-shot.webm" type="video/webm">
+            </video>
+          </div>
+          <div class="col-md-4">
+            <video class="hscard-video" autoplay="autoplay" loop="loop">
+                <source src="/images/fireblast.webm" type="video/webm">
+            </video>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <video class="hscard-video" autoplay="autoplay" loop="loop">
+                <source src="/images/reinforce.webm" type="video/webm">
+            </video>
+          </div>
+          <div class="col-md-4">
+            <video class="hscard-video" autoplay="autoplay" loop="loop">
+                <source src="/images/lesser-heal.webm" type="video/webm">
+            </video>
+          </div>
+          <div class="col-md-4">
+            <video class="hscard-video" autoplay="autoplay" loop="loop">
+                <source src="/images/dagger-mastery.webm" type="video/webm">
+            </video>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <video class="hscard-video" autoplay="autoplay" loop="loop">
+                <source src="/images/totemic-call.webm" type="video/webm">
+            </video>
+          </div>
+          <div class="col-md-4">
+            <video class="hscard-video" autoplay="autoplay" loop="loop">
+                <source src="/images/life-tap.webm" type="video/webm">
+            </video>
+          </div>
+          <div class="col-md-4">
+            <video class="hscard-video" autoplay="autoplay" loop="loop">
+                <source src="/images/armor-up.webm" type="video/webm">
+            </video>
+          </div>
+        </div>
       </div>
     </div>
   </div>
