@@ -59,7 +59,13 @@ parent-category-link: gaming
       </div>
       <div class="col-md-9">
         <p>Sir Finley Mrrgglton is the simplest Discover mechanic in all of Hearthstone to understand. But how do his statistics match up to your expectatoins?</p>
-        <p>Sir Finley simply provides you with 3 new basic Hero power options to choose from each of them are listed below:</p>
+        <p>Important things to note about this card</p>
+        <ul>
+          <li>You are provided with 3 new basic Hero power options to choose from there are a total of 9 classes (listed below)</li>
+          <li>You cannot be offered the same Hero Power that you currently possess</li>
+          <li>Justicar Trueheart DOES function with the new basic Hero Power provided by Sir Finley Mrrgglton.</li>
+          <li>If you gain a new Hero Power before playing Sir Finley your original Hero Power is back up for grabs.</li>
+        </ul>
         <div class="row">
           <div class="col-md-4">
             <video class="hscard-video" autoplay="autoplay" loop="loop">
@@ -111,6 +117,79 @@ parent-category-link: gaming
             </video>
           </div>
         </div>
+        <div>In terms of our formula above we can subsitute in our values about Sir Finley to get a close look at the likelyhood of getting the Hero Powers you are looking for; for those mathematically inclined read along below, anyone else feel free to skip past it to find out the results.</div>
+        <hr/>
+        <div>
+          <h3>Chance of being presented with the ESPORTS moment Hero Power</h3>
+          <div>Out of the 9 possibilties of Hero Powers there only 8 Hero Powers that you currently do not have</div>
+          <blockquote>
+            <div><b>k</b> = 1 (there is only 1 Hero Power we are looking for)</div>
+            <div><b>x</b> = Can be 0,1 this is the amount of Hero Powers presented that what you are looking for.</div>
+            <div><b>N</b> = 8 (there are 8 possible Hero Powers from Sir Finley)</div>
+            <div><b>n</b> = 3 (Discover presents 3 options)</div>
+          </blockquote>
+          <div>Putting these values into our formula above we can establish the following probabilities (rounded to 4 decimal places):</div>
+          <blockquote>
+            <div>Chance to not be offered the Hero Power you need: 62.5%</div>
+            <div>Chance to be presented with the Hero Power you need: 37.5%</div>
+          </blockquote>
+        </div>
+        <hr/>
+        <div>
+          <h3>Chance of being presented with a Defensive Hero Power (for the purposes of this we will use Warrior and Priest as "Defensive")</h3>
+          <div>Out of the 9 possibilties of Hero Powers there only 8 Hero Powers that you currently do not have</div>
+          <div>For simplicity these calculations are for classes that are NOT Warrior or Priest. For those results see the ESPORTS moment above as its the same results as that.</div>
+          <blockquote>
+            <div><b>k</b> = 2 (there is are 2 Hero Powers we are looking for)</div>
+            <div><b>x</b> = Can be 0,1,2 this is the amount of Hero Powers presented that what you are looking for.</div>
+            <div><b>N</b> = 8 (there are 8 possible Hero Powers from Sir Finley)</div>
+            <div><b>n</b> = 3 (Discover presents 3 options)</div>
+          </blockquote>
+          <div>Putting these values into our formula above we can establish the following probabilities (rounded to 4 decimal places):</div>
+          <blockquote>
+            <div>Chance to not be offered 0 Defensive Hero Powers: 35.7143%</div>
+            <div>Chance to be presented with exactly 1 Defensive Hero Power: 53.5714%</div>
+            <div>Chance to be presented with both Defensive Hero Powers: 10.7143%</div>
+          </blockquote>
+        </div>
+        <hr/>
+        <div>
+          <h3>Chance of being presented with a Minion Hero Power (for the purposes of this we will use Shaman and Paladin as "Minion")</h3>
+          <div>Out of the 9 possibilties of Hero Powers there only 8 Hero Powers that you currently do not have</div>
+          <div>For simplicity these calculations are for classes that are NOT Shaman or Paladin. For those results see the ESPORTS moment above as its the same results as that.</div>
+          <div>For the switched on readers you will notice these stats mirror the stats for Defensive Hero Powers. This is because once again there are only 2 options.</div>
+          <blockquote>
+            <div><b>k</b> = 2 (there is are 2 Hero Powers we are looking for)</div>
+            <div><b>x</b> = Can be 0,1,2 this is the amount of Hero Powers presented that what you are looking for.</div>
+            <div><b>N</b> = 8 (there are 8 possible Hero Powers from Sir Finley)</div>
+            <div><b>n</b> = 3 (Discover presents 3 options)</div>
+          </blockquote>
+          <div>Putting these values into our formula above we can establish the following probabilities (rounded to 4 decimal places):</div>
+          <blockquote>
+            <div>Chance to not be offered 0 Minion Hero Powers: 35.7143%</div>
+            <div>Chance to be presented with exactly 1 Minion Hero Power: 53.5714%</div>
+            <div>Chance to be presented with both Minion Hero Powers: 10.7143%</div>
+          </blockquote>
+        </div>
+        <hr/>
+        <div>
+          <h3>Chance of being presented with a Ping Hero Power (for the purposes of this we will use Rogue, Mage and Druid Hero Powers as "Ping ")</h3>
+          <div>Out of the 9 possibilties of Hero Powers there only 8 Hero Powers that you currently do not have</div>
+          <div>For simplicity these calculations are for classes that are NOT Rogue, Mage or Druid. For those results see the Defensive Hero Power above as its the same results as that (2 choices).</div>
+          <blockquote>
+            <div><b>k</b> = 3 (there is are 2 Hero Powers we are looking for)</div>
+            <div><b>x</b> = Can be 0,1,2 this is the amount of Hero Powers presented that what you are looking for.</div>
+            <div><b>N</b> = 8 (there are 8 possible Hero Powers from Sir Finley)</div>
+            <div><b>n</b> = 3 (Discover presents 3 options)</div>
+          </blockquote>
+          <div>Putting these values into our formula above we can establish the following probabilities (rounded to 4 decimal places):</div>
+          <blockquote>
+            <div>Chance to not be offered 0 Ping Hero Powers: 17.8571%</div>
+            <div>Chance to be presented with exactly 1 Ping Hero Power: 53.5714%</div>
+            <div>Chance to be presented with exactly 2 Ping Hero Powers: 26.7857%</div>
+            <div>Chance to be presented with all 3 Ping Hero Powers: 1.7857%</div>
+          </blockquote>
+        </div>
       </div>
     </div>
   </div>
@@ -125,8 +204,14 @@ parent-category-link: gaming
   </div>
   <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
     <div class="panel-body">
-    <img src="/images/arch-thief-rafaam.gif" />
-      Arch-Thief Rafaam is the only discover card that doesn't follow the majority of the general Discover rules...
+      <div class="col-md-3">
+          <img src="/images/arch-thief-rafaam.gif" />
+      </div>
+      <div class="col-md-9">
+        <p>Arch-Thief Rafaam is the only Discover card currently in the game that lets you Discover non-collectable cards.</p>
+        <p>He only allows you to choose between the same 3 options every single time.</p>
+        <p>Obviously in the case of Arch-Thief Rafaam there is a 100% chance that you will be presented with the option you are looking for from him. So I won't go further into this card.</p>
+      </div>
     </div>
   </div>
 </div>
@@ -492,3 +577,4 @@ parent-category-link: gaming
   </div>
 </div>
 To be continued
+Thank you Deeeznutz21, Durable, HermiesL and Twizz for helping with testing and stat creation.
