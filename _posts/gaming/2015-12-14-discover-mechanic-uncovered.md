@@ -363,6 +363,25 @@ parent-category-link: gaming
         </div>
         <hr/>
         <div>
+          <h3>Chance of getting x number of Charge minions presented.</h3>
+          <div>Out of the 16 possibilties of Charge minions there are 2 Druid class minions making the total Taunt count 22.</div>
+          <div>Out of the 331 possibilities of minions to be presented 21 are Druid class minions making the total minion count 394.</div>
+          <blockquote>
+            <div><b>k</b> = 16 (there are 16 possible Charge possibilities from Raven Idol)</div>
+            <div><b>x</b> = Can be 0,1,2 or 3 this is the amount of cards presented that ARE Charge</div>
+            <div><b>N</b> = There are 394 total possible cards</div>
+            <div><b>n</b> = 3 (Discover presents 3 options)</div>
+          </blockquote>
+          <div>Putting these values into our formula above we can establish the following probabilities (rounded to 4 decimal places):</div>
+          <blockquote>
+            <div>Chance to get exactly 0 Chargers presented: 84.1286%</div>
+            <div>Chance to get exactly 1 Charger presented: 15.0067%</div>
+            <div>Chance to get exactly 2 Chargers presented: 0.8494%</div>
+            <div>Chance to get exactly 3 Chargers presented: 0.0152%</div>
+          </blockquote>
+        </div>
+        <hr/>
+        <div>
           <h3>Chance of getting that ESPORTS moment (The 1 exact card you need to save yourself).</h3>
           <div>As we have done thus far we will be allowing 4 copies of each Druid minion to be part of the ESPORTS moment calculations.</div>
           <div>Out of the 331 possibilities of minions to be presented 21 are Druid class minions making the total minion count 394.</div>
@@ -545,8 +564,12 @@ parent-category-link: gaming
   </div>
   <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
     <div class="panel-body">
-    <img src="/images/jeweled-scarab.gif">
-      Jeweled Scarab stuff here
+      <div class="col-md-3">
+        <img src="/images/jeweled-scarab.gif">
+      </div>
+      <div class="col-md-9">
+        <p>jeweled scarab stuff</p>
+      </div>
     </div>
   </div>
 </div>
@@ -575,8 +598,75 @@ parent-category-link: gaming
   </div>
   <div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
     <div class="panel-body">
-    <img src="/images/gorillabot-a-3.gif">
-       Gorillabot A-3 stuff here
+      <div class="col-md-3">
+        <img src="/images/gorillabot-a-3.gif">
+      </div>
+      <div class="col-md-9">
+       <p>As the Gorillabot A-3 can be used in any class I will break down the results into a table form just so that they don't get out of hand.</p>
+       <p>The same methods we have used above are used to create all of these reults if anyone wants the full breakdown of calculations drop me a PM on Reddit (Hbthegreat) and I can give you access to more extensive stats.</p>
+       <div class="table-responsive">
+         <table class="table table-hover table-striped table-bordered">
+           <thead>
+             <tr>
+               <th></th>
+               <th></th>
+               <th></th>
+               <th colspan="2">Chance of a Class Mech</th>
+             </tr>
+             <tr>
+               <th>Class</th>
+               <th>Number of Class Mechs</th>
+               <th>Number of Total Mechs </th>
+               <th>Amount Presented</th>
+               <th>Chance</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr>
+               <td rowspan="3" class="hearth-class-td">Paladin</td>
+               <td rowspan="3" class="hearth-class-td">2</td>
+               <td rowspan="3" class="hearth-class-td">28</td>
+               <td>0</td>
+               <td>79.3651%</td>
+             </tr>
+             <tr>
+               <td>1</td>
+               <td>19.8413%</td>
+             </tr>
+             <tr>
+               <td>2</td>
+               <td>0.7937%</td>
+             </tr>
+             <tr>
+               <td rowspan="3" class="hearth-class-td">Rogue</td>
+               <td rowspan="3" class="hearth-class-td">2</td>
+               <td rowspan="3" class="hearth-class-td">28</td>
+               <td>0</td>
+               <td>79.3651%</td>
+             </tr>
+             <tr>
+               <td>1</td>
+               <td>19.8413%</td>
+             </tr>
+             <tr>
+               <td>2</td>
+               <td>0.7937%</td>
+             </tr>
+             <tr>
+               <td rowspan="2" class="hearth-class-td">Hunter</td>
+               <td rowspan="2" class="hearth-class-td">1</td>
+               <td rowspan="2" class="hearth-class-td">25</td>
+               <td>0</td>
+               <td>88%</td>
+             </tr>
+             <tr>
+               <td>1</td>
+               <td>12%</td>
+             </tr>
+           </tbody>
+         </table>
+       </div>
+      </div>
     </div>
   </div>
 </div>

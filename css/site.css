@@ -19,3 +19,9 @@ footer {
 .panel-body hr {
 	border-top: 2px solid #d8d8d8;
 }
+.table > thead > tr > th, .table > tbody > tr > td {
+	text-align: center
+}
+.table > tbody > tr > .hearth-class-td{
+	vertical-align: middle;
+}
