@@ -25,3 +25,7 @@ footer {
 .table > tbody > tr > .hearth-class-td{
 	vertical-align: middle;
 }
+
+.munchkin-box {
+	width: 300px;
+}
